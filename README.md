@@ -5,15 +5,15 @@
  ## Customize the user schema and/or the database name.
  # The default user database: line 22 in the app.js file - loginapp
  # The user schema is located in the models directory
-    ## User Model
-    {
-        fname: String required: true,
-        lname: String required: true,
-        uname: String required: false,
-        email: String required: true,
-        password: String required: true,
-        admin: Boolean required: true
-    }
+ ## User Model
+  {
+    fname: String required: true,
+    lname: String required: true,
+    uname: String required: false,
+    email: String required: true,
+    password: String required: true,
+    admin: Boolean required: true
+  }
 ```
 
 <ul>
