@@ -2,7 +2,7 @@
 <h3>A web template with sign-up/sign-in capability.</h3>
 
 ```bash
- ## Customize the user schema.
+ ## Customize the user schema and/or the database name.
  # The default user database: line 22 in the app.js file - loginapp
  # The user schema is located in the models directory
     ## User Model
