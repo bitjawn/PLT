@@ -30,7 +30,7 @@
 
 ```bash
 # Installation
- clone https://github.com/bitjawn/RestaurantMenu.git or download the zip
+ clone https://github.com/bitjawn/PLT.git or download the zip
  
  npm install
 
