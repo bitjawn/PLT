@@ -25,6 +25,7 @@
     <li>Foundation: 6.3.1</li>
     <li>Nodemon: 1.11.0</li>
     <li>Bcrypt: 1.0.2</li>
+    <li>Passport: 0.3.2</li>
 </ul>
 
 <h3>Instructions</h3>
