@@ -1,0 +1,104 @@
+{{#if hasErrors}}
+   <div class="alert alert-danger">
+    {{# each messages }}
+        <p>{{this}}</p>
+    {{/each }}
+   </div>
+{{/if}}
+
+<div class="row">
+    <div class="small-12 medium-12 large-12 columns">
+        {{# if user}}
+            <ul class="tabs" data-active-collapse="true" data-tabs id="collapsing-tabs">
+                <li class="tabs-title is-active"><a href="#panel1c" aria-selected="true"><strong>{{greeting}}</strong></a></li>
+                <li class="tabs-title"><a href="#panel2c"><strong>Contact</strong></a></li>
+                <li class="tabs-title"><a href="#panel3c"><strong>Image</strong></a></li>
+                <!-- <li class="tabs-title"><a href="#"><strong id="clock" class="clock datetimestamp"></strong></a></li> -->
+            </ul>
+
+            <div class="tabs-content" data-tabs-content="collapsing-tabs">
+                <div class="tabs-panel is-active" id="panel1c">
+                    <div class="row">
+                        <div class="left-floater">
+                            <table class="hover">
+                                <thead>
+                                    <tr>
+                                        <th width="150">First Name</th>
+                                        <th width="150">Last Name</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>{{user.fname}}</td>
+                                        <td>{{user.lname}}</td>
+                                    </tr>                    
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="right-floater">
+                            <h4 class="header">Edit name</h4>
+                            <form id="add-text-input-form" method="post" style="margin:10px;">
+                                <div class="input-group">
+                                    <span class="input-group-label"><i class="fa fa-user" aria-hidden="true"></i></span>
+                                    <input type="text" name="fname" placeholder="First name" required class="input-group-field">
+                                </div>
+                                <div class="input-group">
+                                    <span class="input-group-label"><i class="fa fa-user" aria-hidden="true"></i></span>
+                                    <input type="text" name="lname" placeholder="Last name" required class="input-group-field">
+                                </div>
+                                <div id="add-text-input-to-form"></div>
+                            </form>
+                            <ul class="dropdown menu" data-responsive-menu="drilldown medium-dropdown">
+                                <li><a id="textInput" href="#">Add Text Field</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="tabs-panel" id="panel2c">
+                    <div class="row">
+                        <div class="left-floater">
+                            <p style="margin:10px;"><strong>Email: </strong>{{user.email}}</p>
+                        </div>
+
+                        <div class="right-floater">
+                            <h4>Edit email</h4>
+                            <form id="add-email-input-form" method="post" style="margin:10px;">
+                                <div class="input-group">
+                                    <span class="input-group-label"><i class="fa fa-envelope" aria-hidden="true"></i></span>
+                                    <input type="email" name="email" class="input-group-field" required>
+                                </div>
+                                <div id="add-email-input-to-form"></div>
+                            </form>
+                            <ul class="dropdown menu" data-responsive-menu="drilldown medium-dropdown">
+                                <li><a id="emailInput" href="#">Add Email Field</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="tabs-panel" id="panel3c">
+                    <div class="row">
+                        <div class="left-floater" style="margin:10px;">
+                            <img class="thumbnail profile-thumbnail" src={{# if user.picture}} "/{{user.picture}}" {{else}} "/graphics/vine.png" {{/if}}>
+                        </div>
+
+                        <div class="right-floater" style="margin:10px;" align="center">
+                            <h4>Change profile picture</h4>
+                            <form method='post' encType="multipart/form-data">
+                                <div class="input-group">
+                                    <i class="fa fa-file-image-o" aria-hidden="true"></i>
+                                    <input type="file" name="picture" class="input-group-field">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {{else}}
+            <h1>User Profile</h1>
+        {{/if}}
+    </div>
+</div>
+
+{{# if user.admin }}
+    {{>add-item}}
+{{/if}}

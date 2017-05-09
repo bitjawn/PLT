@@ -1,0 +1,29 @@
+<div class="row">
+    <h1>Sign In</h1>
+    {{#if hasErrors}}
+       <div class="callout alert" data-closable>
+        {{# each messages }}
+            <p>{{this}}</p>
+        {{/each }}
+        <button class="close-button" aria-label="Dismiss alert" type="button" data-close>
+            <span aria-hidden="true">&times;</span>
+        </button>
+       </div>
+    {{/if}}
+    <form action="/user/signin" method="post">
+       <div class="input-group">
+            <span class="input-group-label"><i class="fa fa-user" aria-hidden="true"></i></span>
+            <input type="text" name="email" class="input-group-field" placeholder="Username or Email" required>
+        </div>
+
+        <div class="input-group">
+            <span class="input-group-label"><i class="fa fa-unlock" aria-hidden="true"></i></span>
+            <input type="password" name="password" class="input-group-field" placeholder="Password">
+        </div>
+
+        <input type="hidden" name="_csrf" value="{{ csrfToken }}">
+        <input type="hidden" name="isAdmin" value="{{isAdmin}}">
+        <button type="submit" class="button">Sign In</button>
+    </form>    
+    <a href="/user/forgot" class="small primary">Forgot password?</a>
+</div>

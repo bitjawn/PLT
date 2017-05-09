@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+            <meta charset="UTF-8">		
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="shortcut icon" href="graphics/favicon.ico" type="image/x-icon" />
+            <script src="https://use.fontawesome.com/fc14e58e15.js"></script>
+            <script src="/js/vendor/jquery.js"></script>
+            <script src="/js/resources.js"></script>
+            <link rel='stylesheet' href='/css/app.css' />
+            <link rel="stylesheet" href="/css/foundation.css">
+            <link rel="stylesheet" href="/css/icons/foundation-icons.css">
+            <title>{{#if pageTitle}} {{{pageTitle}}} {{else}} Passport Project Demo {{/if}}</title>
+	</head> 
+	<body>
+            {{> header}}        
+            <script src="/js/vendor/jquery.js"></script>
+            <div class="row">                
+                    {{#if pageHeader}}
+                        <h3 class="header">{{{pageHeader}}} </h3>
+                    {{/if}}
+               
+                    {{{body}}}
+            </div>		
+        </body>	
+        <script src="/js/vendor/what-input.js"></script>
+        <script src="/js/vendor/foundation.js"></script>
+        <script src="/js/resources.js"></script>
+        <script src="/js/app.js"></script>
+</html>

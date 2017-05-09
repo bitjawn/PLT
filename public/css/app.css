@@ -1,0 +1,243 @@
+/* Global */
+.main-body {
+    border:solid 1pt rgb(112,101,100);
+    margin-top:10px;
+    height: 81vh;
+}
+
+.about {
+   /*  background-image: url("/graphics/background4.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed; */
+    /* background-position: 50px 100px;  */
+    position: absolute;
+    left: 30%;
+    top: 15%;
+    width: 40%;
+    opacity: 0.09;
+    z-index: -1;
+    font-weight:1000;
+}
+
+.contact {
+   /*  background-image: url("/graphics/background4.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed; */
+    /* background-position: 50px 100px;  */
+    position: absolute;
+    left: 25%;
+    top: 15%;
+    width: 40%;
+    opacity: 0.09;
+    z-index: -1;
+    font-weight:1000;
+}
+
+.main-div {
+    padding:5px;
+    margin:10px;
+}
+
+.main-para {
+    padding:3px;
+}
+
+.header {
+    text-align:center;
+}
+
+.border {
+    border:solid 1pt rgb(212,221,200);
+}
+
+.left-floater,
+.right-floater {
+    width:45%;
+}
+
+.editor-form-button-left-floater,
+.editor-form-button-right-floater {
+   
+}
+
+.editor-form-button-left-floater {
+    float:left;
+    margin:6px;
+    padding:4px;
+    text-align:center;
+    font-weight:866;
+}
+
+.editor-form-button-right-floater {
+    float:right;
+    margin:6px;
+    padding:4px;
+    text-align:center;
+    font-weight:866;
+}
+
+.left-floater {
+    float:left;
+}
+
+.center-floater {
+    float:center;
+}
+
+.right-floater {
+    float:right;
+}
+
+.thumbnail {
+    width:555px;
+    height:355px;
+    padding:0;
+    margin:0;
+}
+
+.item {
+    width:555px;
+    height:355px;
+    padding:0;
+    margin:0;
+}
+
+.new-item  {
+    position: absolute;
+    left: 18%;
+    top: 1%;
+    width: 80%;
+    opacity: 0.09;
+    z-index: -1;
+    font-weight:1000;
+}
+
+.reveal input,
+.reveal textarea {
+    background:transparent;
+}
+
+.restaurant-menu-body-div {    
+    /* border:solid 1pt rgb(112,101,100); */
+    height:72vh;
+}
+
+.restaurant-menu-div {
+   /*  margin:10px;
+    padding:10px; */
+    margin-top:10px;
+}
+
+.label {
+    font-weight:900;
+    padding:10px;
+    margin:10px;
+}
+
+.accordion-content p {
+    font-weight:900;
+    font-size: 14pt;
+}
+
+.server-message>li {
+    list-style-type: none;
+    margin:5px;
+    padding:0;
+    display:inline;
+    margin:10px;
+    color:rgb(200,150,150);
+    font-weight:900;
+    font-size:15pt;    
+}
+
+.logout  {
+    list-style-type: none;
+    margin:0;
+    padding:0;
+    display:inline;
+}
+
+.server-message {    
+    text-align:center;
+}
+
+
+h4 {
+    text-align:center;
+}
+
+ul {
+    margin-left:10px;
+}
+
+iframe {
+    width: 100%;
+}
+
+
+/*Scrollbar 
+*/
+.v-scroll {
+	overflow:scroll;
+}
+
+::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
+}
+
+::-webkit-scrollbar-thumb {
+    background: transparent;
+}
+
+@media screen and (max-width: 520px) {
+    .left-floater,
+    .right-floater {
+            float:none;
+            text-align: center;
+        }
+
+    .left-floater,
+    .right-floater {
+            margin:auto;
+            text-align:center;
+            width:100%;
+        }
+
+    .thumbnail {
+            width:100%;
+            height:100%;
+        }
+    
+    .map-div {
+            width:100%;
+            height:25;
+        }
+}
+
+@media screen and (max-width: 830px) {
+    .left-floater,
+    .right-floater {
+            float:none;
+            text-align: center;
+        }
+
+    .left-floater,
+    .right-floater {
+            margin:auto;
+            text-align:center;
+            width:100%;
+        }
+
+    .thumbnail {
+            width:100%;
+            height:100%;
+        }
+    
+    .map-div {
+            width:100%;
+            height:25;
+        }
+}

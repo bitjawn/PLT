@@ -1,0 +1,37 @@
+<div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="medium">
+    <button class="menu-icon" type="button" data-toggle="main-menu"></button>
+    <div class="title-bar-title">Menu</div> 
+</div>
+
+<div class="top-bar" id="main-menu">
+    <div class="top-bar-left">
+        <ul class="dropdown menu" data-responsive-menu="drilldown medium-dropdown">
+                {{#if login}}
+                    <li class="menu-text">{{# if user.picture}} <img src="/{{user.picture}}" class="profile-img"> {{else}} Greetings {{user.fname}} {{/if}}</li>  
+               {{else}}
+                    <li class="menu-text">Welcome</li>                        
+                {{/if}}
+            <li>
+                <a href="/">Browse</a>
+                <ul class="menu vertical">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="top-bar-right">
+        <ul class=" dropdown menu logout">
+            {{#if login}}
+                {{> logged-in-header}}
+                {{#if user.admin}}
+                    {{> add-item}}
+                {{/if}}
+            {{else}}    
+                {{> logged-out-header}}
+            {{/if}}
+        </ul>
+    </div>
+</div>
+
