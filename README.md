@@ -19,6 +19,7 @@
 <ul>
     <li>NodeJS: 7.7.4</li>
     <li>NPM: 4.5.0</li>
+    <li><a href="https://www.mongodb.com/download-center?jmp=docs&_ga=1.202993809.1491474904.1492296757#community"><i>MongoDB</i></a></li>
     <li>Express: 4.15.2</li>
     <li>Express-Handlebars: 3.0.0</li>    
     <li>Foundation: 6.3.1</li>
@@ -34,7 +35,7 @@
  npm install
 
 # External Dependencies
- <a href="https://www.mongodb.com/download-center?jmp=docs&_ga=1.202993809.1491474904.1492296757#community"><i>MongoDB</i></a>
+ MongoDB
  npm install --global nodemon
  
 # Run App
