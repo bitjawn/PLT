@@ -81,11 +81,11 @@ passport.use('local.signin', new LocalStrategy({
         }
         
         if (!user) {
-            return done(null, false, {message: 'Invalid email or password.'});
+            return done(null, false, {message: 'Invalid username or password.'});
         }
         
         if (!user.validPassword(password)) {
-            return done(null, false, {message: 'Invalid email or password.'});
+            return done(null, false, {message: 'Invalid username or password.'});
         } 
         
         return done(null, user);
